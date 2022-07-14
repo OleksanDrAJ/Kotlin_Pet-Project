@@ -17,6 +17,11 @@ class ChatController (
     @Autowired
     private val chatService: ChatService){
 
+
+    @GetMapping()
+    fun retStr(): String{
+        return "gggggg"
+    }
     //    @PostMapping("/messages")
     //    @ResponseStatus(HttpStatus.CREATED)
     //    public void addMessageToTheChat(@RequestBody Message message, Chat chat) {
@@ -31,6 +36,7 @@ class ChatController (
         } else ResponseEntity<List<ChatDto>?>(chats, HttpStatus.OK)
     }
 
-    @PostMapping
-    fun createChat(): List<UserDto> = chatService.createChat()
+
+//    @PostMapping
+//    fun createChat(): List<UserDto> = chatService.createChat()
 }

@@ -1,14 +1,17 @@
 package dto
 
+import org.bson.types.ObjectId
+import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.DBRef
 import org.springframework.data.mongodb.core.mapping.Document
-import javax.persistence.Id
 
 @Document
 data class ChatDto(
     @Id
-    private val chatId: Int,
-    private val chatTopic: String,
+    //object id
+    private val id: ObjectId,
+    private val topic: String,
+    // no need for chat name
 
     @DBRef
     private val message: List<MessageDto>,

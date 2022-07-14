@@ -11,9 +11,6 @@ class ChatServiceImpl : ChatService {
             return chatRepository
         }
 
-    override fun createChat(users: List<UserDto?>?): ChatDto {
-        TODO("Not yet implemented")
-    }
 
 //    override fun createChat(users: List<UserDto?>?): ChatDto {
 //        val chat = ChatDto()
